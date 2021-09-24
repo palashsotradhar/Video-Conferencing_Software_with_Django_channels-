@@ -1,0 +1,26 @@
+console.log("hwllow world")
+
+
+var usernameInput = document.querySelector('#username');
+var btnjoin = document.querySelector('#btn-join');
+console.log(usernameInput)
+
+var username;
+
+btnjoin.addEventListener('click',() =>{
+  console.log("button was clicked")
+  username = usernameInput.value;
+  console.log('username:',username);
+  if(username == ''){
+    return;
+  }
+  usernameInput.value = '';
+  usernameInput.disabled = true;
+  usernameInput.style.visibility = 'hidden';
+
+  btnjoin.disabled = true;
+  btnjoin.style.visibility = 'hidden';
+
+  var labelUsername = document.querySelector('#label-username');
+  labelUsername.innerHTML = username;
+});

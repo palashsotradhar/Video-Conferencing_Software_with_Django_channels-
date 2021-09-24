@@ -1,0 +1,44 @@
+{% load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dhango Channels webRTC</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css'%}">
+</head>
+<body>
+<h3 id = "label-username">USERNAME</h3>
+<div class="">
+  <input id="username"><button id='btn-join'>Join Room</button>
+</div>
+<div class="main-grid-container">
+  <div id="video-container">
+    <div class="">
+      <video id="local-video" style="float: left;" autoplay playsinline>
+
+      </video>
+    </div>
+    <button id="btn-toggle-audio">Audio Mute</button>
+    <button id="btn-toggle-video">Video off</button>
+
+  </div>
+  <div id="chat">
+    <h3>CHAT</h3>
+    <div id="meassages">
+      <ul id="message-list">
+
+      </ul>
+
+    </div>
+    <div class="">
+      <input id="msg">
+      <button id="btn-send-msg">Send Message</button>
+
+    </div>
+    <button id="btn-share-screen">Share Screen</button>
+
+  </div>
+
+</div>
+<script type="text/javascript" src="{% static 'js/main.js '%}"></script>
+</body>
+</html>
